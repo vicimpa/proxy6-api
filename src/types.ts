@@ -41,6 +41,7 @@ export interface Proxy6Result<NoKey extends false | true = false> {
 
   ProxyItem: {
     id: string;
+    ip: string;
     host: string;
     port: string;
     user: string;
@@ -93,6 +94,7 @@ export interface Proxy6Result<NoKey extends false | true = false> {
   Check: this['Ok'] & {
     proxy_id: number;
     proxy_status: boolean;
+    proxy_time: number;
   };
 
   IPAuth: this['Ok'] & {

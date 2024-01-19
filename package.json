@@ -2,6 +2,14 @@
   "name": "@vicimpa/proxy6-api",
   "version": "0.0.1",
   "main": "dist/index.js",
+  "author": {
+    "email": "vicimpa@ya.ru",
+    "name": "PromiSe####",
+    "url": "https://github.com/vicimpa"
+  },
+  "repository": {
+    "url": "https://github.com/vicimpa/proxy6-api"
+  },
   "engines": {
     "node": ">=21.6.0",
     "npm": ">=10.2.4"
@@ -14,5 +22,11 @@
     "@types/node": "^20.11.5",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3"
-  }
+  },
+  "keywords": [
+    "proxy6net",
+    "proxyapi",
+    "proxy",
+    "automatization"
+  ]
 }
