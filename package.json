@@ -1,0 +1,18 @@
+{
+  "name": "@vicimpa/proxy6-api",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=21.6.0",
+    "npm": ">=10.2.4"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "private": false,
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
