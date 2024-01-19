@@ -1,6 +1,5 @@
 {
   "name": "@vicimpa/proxy6-api",
-  "version": "0.0.1",
   "main": "dist/index.js",
   "author": {
     "email": "vicimpa@ya.ru",
@@ -11,11 +10,12 @@
     "url": "https://github.com/vicimpa/proxy6-api"
   },
   "engines": {
-    "node": ">=21.6.0",
-    "npm": ">=10.2.4"
+    "node": ">=21.0.0",
+    "npm": ">=10.0.0"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "node test.js"
   },
   "private": false,
   "devDependencies": {

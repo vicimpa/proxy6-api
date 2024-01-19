@@ -26,6 +26,7 @@ export class Proxy6Error extends Error {
       case 400: return "Error no money - Ошибка баланса.На вашем балансе отсутствуют средства, либо их не хватает для покупки запрашиваемого кол - ва прокси";
       case 404: return "Error not found - Ошибка поиска.Возникает когда запрашиваемый элемент не найден";
       case 410: return "Error price - Ошибка расчета стоимости.Итоговая стоимость меньше, либо равна нулю";
+      case 503: return "Error to many requests - Слишком частые запросы";
       default: return "Error unknown - Неизвестная ошибка";
     }
   }

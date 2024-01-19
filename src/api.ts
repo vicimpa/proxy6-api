@@ -188,12 +188,18 @@ export class Proxy6Api {
     }
 
     return fetch(`${this.#base}/${this.#apiKey}/${method ?? ''}${paramsString}`)
-      .then<Proxy6Result['Ok'] | Proxy6Result['Fail']>(e => e.json() as any)
-      .then<T>(result => {
-        if (result.status === 'no')
-          throw new Proxy6Error(result.error_id, result.error);
+      .then(res => {
+        if (res.status === 503)
+          throw new Proxy6Error(503, "To many requests");
 
-        return result as T;
+        return res;
+      })
+      .then<Proxy6Result['Ok'] | Proxy6Result['Fail']>(e => e.json() as any)
+      .then<T>(res => {
+        if (res.status === 'no')
+          throw new Proxy6Error(res.error_id, res.error);
+
+        return res as T;
       });
   }
 
