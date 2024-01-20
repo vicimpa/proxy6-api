@@ -9,14 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: fregante/setup-git-user@v1
       - uses: actions/setup-node@v3
         with:
           node-version: 21
       - run: npm i
       - run: npm run build
-      - run: git config --global user.name "PromiSe####"
-      - run: git config --global user.email "vicimpa@ya.ru"
-      - run: npm version $GITHUB_REF_NAME -f
+      - run: npm version from-git
 
   publish-npm:
     needs: build
